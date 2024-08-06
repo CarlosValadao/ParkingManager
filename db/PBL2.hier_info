@@ -1,0 +1,1706 @@
+|Sistema
+vagasEstacionamento[0] => vagasEstacionamento[0].IN2
+vagasEstacionamento[1] => vagasEstacionamento[1].IN2
+vagasEstacionamento[2] => vagasEstacionamento[2].IN2
+vagasEstacionamento[3] => vagasEstacionamento[3].IN2
+vagasEstacionamento[4] => vagasEstacionamento[4].IN2
+vagasEstacionamento[5] => vagasEstacionamento[5].IN2
+vagasEstacionamento[6] => vagasEstacionamento[6].IN2
+vagasEstacionamento[7] => vagasEstacionamento[7].IN2
+CLK => CLK.IN1
+digitoD7S[0] <= MUX_quadruplo_4x1:MuxDigitoD7S.f
+digitoD7S[1] <= MUX_quadruplo_4x1:MuxDigitoD7S.f
+digitoD7S[2] <= MUX_quadruplo_4x1:MuxDigitoD7S.f
+digitoD7S[3] <= MUX_quadruplo_4x1:MuxDigitoD7S.f
+numeroD7S[0] <= MUX_7b_4x1:MuxNumeroDecodificadoD7S.f
+numeroD7S[1] <= MUX_7b_4x1:MuxNumeroDecodificadoD7S.f
+numeroD7S[2] <= MUX_7b_4x1:MuxNumeroDecodificadoD7S.f
+numeroD7S[3] <= MUX_7b_4x1:MuxNumeroDecodificadoD7S.f
+numeroD7S[4] <= MUX_7b_4x1:MuxNumeroDecodificadoD7S.f
+numeroD7S[5] <= MUX_7b_4x1:MuxNumeroDecodificadoD7S.f
+numeroD7S[6] <= MUX_7b_4x1:MuxNumeroDecodificadoD7S.f
+pontoD7S <= <VCC>
+colunaMatrizLEDS[0] <= MUX_duplo_2x1:MuxColunaMatrizLEDS.f
+colunaMatrizLEDS[1] <= MUX_duplo_2x1:MuxColunaMatrizLEDS.f
+linhaMatrizLEDS[0] <= MUX_quadruplo_2x1:MuxLinhaMatrizLEDS.f
+linhaMatrizLEDS[1] <= MUX_quadruplo_2x1:MuxLinhaMatrizLEDS.f
+linhaMatrizLEDS[2] <= MUX_quadruplo_2x1:MuxLinhaMatrizLEDS.f
+linhaMatrizLEDS[3] <= MUX_quadruplo_2x1:MuxLinhaMatrizLEDS.f
+linhaMatrizLEDSOff[0] <= <VCC>
+linhaMatrizLEDSOff[1] <= <VCC>
+linhaMatrizLEDSOff[2] <= <VCC>
+
+
+|Sistema|Inversor8b:InversorVagas
+A[0] => notA[0].DATAIN
+A[1] => notA[1].DATAIN
+A[2] => notA[2].DATAIN
+A[3] => notA[3].DATAIN
+A[4] => notA[4].DATAIN
+A[5] => notA[5].DATAIN
+A[6] => notA[6].DATAIN
+A[7] => notA[7].DATAIN
+notA[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+notA[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+notA[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+notA[3] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+notA[4] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+notA[5] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+notA[6] <= A[6].DB_MAX_OUTPUT_PORT_TYPE
+notA[7] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq
+clk => clk.IN1
+Q18 <= Q18.DB_MAX_OUTPUT_PORT_TYPE
+Q19 <= FF_JK:FF_JK19.Q
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK1
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK2
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK3
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK4
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK5
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK6
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK7
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK8
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK9
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK10
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK11
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK12
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK13
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK14
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK15
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK16
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK17
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK18
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DivisorFrequencia:DivisorFreq|FF_JK:FF_JK19
+clk => Q~reg0.CLK
+J => Mux0.IN3
+K => Mux0.IN4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas
+V[0] => V[0].IN1
+V[1] => V[1].IN1
+V[2] => V[2].IN1
+V[3] => V[3].IN1
+V[4] => V[4].IN1
+V[5] => V[5].IN1
+V[6] => V[6].IN1
+V[7] => V[7].IN1
+S[0] <= Somador4b:somador7.S
+S[1] <= Somador4b:somador7.S
+S[2] <= Somador4b:somador7.S
+S[3] <= Somador4b:somador7.S
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador1
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador1|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador1|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador1|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador1|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador2
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador2|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador2|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador2|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador2|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador3
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador3|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador3|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador3|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador3|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador4
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador4|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador4|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador4|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador4|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador5
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador5|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador5|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador5|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador5|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador6
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador6|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador6|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador6|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador6|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador7
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador7|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador7|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador7|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasOcupadas|Somador4b:somador7|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres
+V[0] => V[0].IN1
+V[1] => V[1].IN1
+V[2] => V[2].IN1
+V[3] => V[3].IN1
+V[4] => V[4].IN1
+V[5] => V[5].IN1
+V[6] => V[6].IN1
+V[7] => V[7].IN1
+S[0] <= Somador4b:somador7.S
+S[1] <= Somador4b:somador7.S
+S[2] <= Somador4b:somador7.S
+S[3] <= Somador4b:somador7.S
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador1
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador1|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador1|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador1|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador1|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador2
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador2|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador2|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador2|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador2|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador3
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador3|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador3|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador3|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador3|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador4
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador4|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador4|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador4|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador4|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador5
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador5|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador5|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador5|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador5|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador6
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador6|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador6|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador6|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador6|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador7
+S[0] <= SomadorCompleto:s1b1.S
+S[1] <= SomadorCompleto:s1b2.S
+S[2] <= SomadorCompleto:s1b3.S
+S[3] <= SomadorCompleto:s1b4.S
+Cout <= SomadorCompleto:s1b4.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador7|SomadorCompleto:s1b1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador7|SomadorCompleto:s1b2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador7|SomadorCompleto:s1b3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|SomadorVagas:SomadorVagasLivres|Somador4b:somador7|SomadorCompleto:s1b4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|Sistema|DecodificadorBin2DecD7S:DecodificadorVagasOcupadas
+b0 => Eand3.IN0
+b0 => Aand1.IN0
+b0 => bAnd1.IN0
+b0 => cFinal.IN0
+b0 => Dand1.IN0
+b0 => Dand2.IN0
+b0 => Dand3.IN0
+b0 => Eand1.IN0
+b0 => Eand2.IN0
+b0 => Fand1.IN0
+b0 => Fand2.IN0
+b0 => Fand3.IN0
+b0 => Gand1.IN0
+b0 => Gand2.IN0
+b1 => Ab1xorb3.IN0
+b1 => bAnd1.IN1
+b1 => Dand2.IN1
+b1 => Dand3.IN1
+b1 => Eand2.IN1
+b1 => Gand2.IN1
+b1 => cFinal.IN1
+b1 => Dand1.IN1
+b1 => Eand3.IN1
+b1 => Fand1.IN1
+b1 => Fand2.IN1
+b1 => Gand1.IN1
+b2 => bXor.IN0
+b2 => cFinal.IN2
+b2 => Dand3.IN2
+b2 => Fand2.IN2
+b2 => Fand3.IN1
+b2 => Gand2.IN2
+b2 => Aand1.IN1
+b2 => Dand1.IN2
+b2 => Dand2.IN2
+b2 => Eand2.IN2
+b2 => Eand3.IN2
+b2 => Gand1.IN2
+b3 => Ab1xorb3.IN1
+b3 => bXor.IN1
+b3 => Dand1.IN3
+b3 => Dand3.IN3
+b3 => Eand1.IN1
+b3 => Eand3.IN3
+b3 => Fand1.IN2
+b3 => Fand3.IN2
+b3 => Gand2.IN3
+b3 => cFinal.IN3
+b3 => Dand2.IN3
+segmentos[0] <= gFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[1] <= fFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[2] <= eFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[3] <= dFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[4] <= cFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[5] <= bFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[6] <= aFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|DecodificadorBin2DecD7S:DecodificadorVagasLivres
+b0 => Eand3.IN0
+b0 => Aand1.IN0
+b0 => bAnd1.IN0
+b0 => cFinal.IN0
+b0 => Dand1.IN0
+b0 => Dand2.IN0
+b0 => Dand3.IN0
+b0 => Eand1.IN0
+b0 => Eand2.IN0
+b0 => Fand1.IN0
+b0 => Fand2.IN0
+b0 => Fand3.IN0
+b0 => Gand1.IN0
+b0 => Gand2.IN0
+b1 => Ab1xorb3.IN0
+b1 => bAnd1.IN1
+b1 => Dand2.IN1
+b1 => Dand3.IN1
+b1 => Eand2.IN1
+b1 => Gand2.IN1
+b1 => cFinal.IN1
+b1 => Dand1.IN1
+b1 => Eand3.IN1
+b1 => Fand1.IN1
+b1 => Fand2.IN1
+b1 => Gand1.IN1
+b2 => bXor.IN0
+b2 => cFinal.IN2
+b2 => Dand3.IN2
+b2 => Fand2.IN2
+b2 => Fand3.IN1
+b2 => Gand2.IN2
+b2 => Aand1.IN1
+b2 => Dand1.IN2
+b2 => Dand2.IN2
+b2 => Eand2.IN2
+b2 => Eand3.IN2
+b2 => Gand1.IN2
+b3 => Ab1xorb3.IN1
+b3 => bXor.IN1
+b3 => Dand1.IN3
+b3 => Dand3.IN3
+b3 => Eand1.IN1
+b3 => Eand3.IN3
+b3 => Fand1.IN2
+b3 => Fand3.IN2
+b3 => Gand2.IN3
+b3 => cFinal.IN3
+b3 => Dand2.IN3
+segmentos[0] <= gFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[1] <= fFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[2] <= eFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[3] <= dFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[4] <= cFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[5] <= bFinal.DB_MAX_OUTPUT_PORT_TYPE
+segmentos[6] <= aFinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+c[0] => c[0].IN1
+c[1] => c[1].IN1
+c[2] => c[2].IN1
+c[3] => c[3].IN1
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+d[3] => d[3].IN1
+s0 => s0.IN4
+s1 => s1.IN4
+f[0] <= MUX_basico_4x1:MUX_basico_4x1_0.f
+f[1] <= MUX_basico_4x1:MUX_basico_4x1_1.f
+f[2] <= MUX_basico_4x1:MUX_basico_4x1_2.f
+f[3] <= MUX_basico_4x1:MUX_basico_4x1_3.f
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_0
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+s0 => s0.IN1
+s1 => s1.IN2
+f <= MUX_basico_2x1:MUX_basico3.f
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_0|MUX_basico_2x1:MUX_basico1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_0|MUX_basico_2x1:MUX_basico2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_0|MUX_basico_2x1:MUX_basico3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+s0 => s0.IN1
+s1 => s1.IN2
+f <= MUX_basico_2x1:MUX_basico3.f
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_1|MUX_basico_2x1:MUX_basico1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_1|MUX_basico_2x1:MUX_basico2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_1|MUX_basico_2x1:MUX_basico3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+s0 => s0.IN1
+s1 => s1.IN2
+f <= MUX_basico_2x1:MUX_basico3.f
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_2|MUX_basico_2x1:MUX_basico1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_2|MUX_basico_2x1:MUX_basico2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_2|MUX_basico_2x1:MUX_basico3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_3
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+s0 => s0.IN1
+s1 => s1.IN2
+f <= MUX_basico_2x1:MUX_basico3.f
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_3|MUX_basico_2x1:MUX_basico1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_3|MUX_basico_2x1:MUX_basico2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_4x1:MuxDigitoD7S|MUX_basico_4x1:MUX_basico_4x1_3|MUX_basico_2x1:MUX_basico3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+c[0] => c[0].IN1
+c[1] => c[1].IN1
+c[2] => c[2].IN1
+c[3] => c[3].IN1
+c[4] => c[4].IN1
+c[5] => c[5].IN1
+c[6] => c[6].IN1
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+d[3] => d[3].IN1
+d[4] => d[4].IN1
+d[5] => d[5].IN1
+d[6] => d[6].IN1
+s0 => s0.IN7
+s1 => s1.IN7
+f[0] <= MUX_basico_4x1:MUX_basico_4x1_0.f
+f[1] <= MUX_basico_4x1:MUX_basico_4x1_1.f
+f[2] <= MUX_basico_4x1:MUX_basico_4x1_2.f
+f[3] <= MUX_basico_4x1:MUX_basico_4x1_3.f
+f[4] <= MUX_basico_4x1:MUX_basico_4x1_4.f
+f[5] <= MUX_basico_4x1:MUX_basico_4x1_5.f
+f[6] <= MUX_basico_4x1:MUX_basico_4x1_6.f
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_0
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+s0 => s0.IN1
+s1 => s1.IN2
+f <= MUX_basico_2x1:MUX_basico3.f
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_0|MUX_basico_2x1:MUX_basico1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_0|MUX_basico_2x1:MUX_basico2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_0|MUX_basico_2x1:MUX_basico3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+s0 => s0.IN1
+s1 => s1.IN2
+f <= MUX_basico_2x1:MUX_basico3.f
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_1|MUX_basico_2x1:MUX_basico1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_1|MUX_basico_2x1:MUX_basico2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_1|MUX_basico_2x1:MUX_basico3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+s0 => s0.IN1
+s1 => s1.IN2
+f <= MUX_basico_2x1:MUX_basico3.f
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_2|MUX_basico_2x1:MUX_basico1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_2|MUX_basico_2x1:MUX_basico2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_2|MUX_basico_2x1:MUX_basico3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_3
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+s0 => s0.IN1
+s1 => s1.IN2
+f <= MUX_basico_2x1:MUX_basico3.f
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_3|MUX_basico_2x1:MUX_basico1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_3|MUX_basico_2x1:MUX_basico2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_3|MUX_basico_2x1:MUX_basico3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_4
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+s0 => s0.IN1
+s1 => s1.IN2
+f <= MUX_basico_2x1:MUX_basico3.f
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_4|MUX_basico_2x1:MUX_basico1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_4|MUX_basico_2x1:MUX_basico2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_4|MUX_basico_2x1:MUX_basico3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_5
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+s0 => s0.IN1
+s1 => s1.IN2
+f <= MUX_basico_2x1:MUX_basico3.f
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_5|MUX_basico_2x1:MUX_basico1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_5|MUX_basico_2x1:MUX_basico2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_5|MUX_basico_2x1:MUX_basico3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_6
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+s0 => s0.IN1
+s1 => s1.IN2
+f <= MUX_basico_2x1:MUX_basico3.f
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_6|MUX_basico_2x1:MUX_basico1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_6|MUX_basico_2x1:MUX_basico2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_7b_4x1:MuxNumeroDecodificadoD7S|MUX_basico_4x1:MUX_basico_4x1_6|MUX_basico_2x1:MUX_basico3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_duplo_2x1:MuxColunaMatrizLEDS
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+s => s.IN2
+f[0] <= MUX_basico_2x1:MUX_basico_2x1_0.f
+f[1] <= MUX_basico_2x1:MUX_basico_2x1_1.f
+
+
+|Sistema|MUX_duplo_2x1:MuxColunaMatrizLEDS|MUX_basico_2x1:MUX_basico_2x1_0
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_duplo_2x1:MuxColunaMatrizLEDS|MUX_basico_2x1:MUX_basico_2x1_1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_2x1:MuxLinhaMatrizLEDS
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+s => s.IN4
+f[0] <= MUX_basico_2x1:MUX_basico_2x1_0.f
+f[1] <= MUX_basico_2x1:MUX_basico_2x1_1.f
+f[2] <= MUX_basico_2x1:MUX_basico_2x1_2.f
+f[3] <= MUX_basico_2x1:MUX_basico_2x1_3.f
+
+
+|Sistema|MUX_quadruplo_2x1:MuxLinhaMatrizLEDS|MUX_basico_2x1:MUX_basico_2x1_0
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_2x1:MuxLinhaMatrizLEDS|MUX_basico_2x1:MUX_basico_2x1_1
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_2x1:MuxLinhaMatrizLEDS|MUX_basico_2x1:MUX_basico_2x1_2
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Sistema|MUX_quadruplo_2x1:MuxLinhaMatrizLEDS|MUX_basico_2x1:MUX_basico_2x1_3
+a => and2.IN0
+b => and1.IN0
+s => and1.IN1
+s => and2.IN1
+f <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+

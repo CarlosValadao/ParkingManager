@@ -1,0 +1,11 @@
+module MUX_quadruplo_4x1(a, b, c, d, s0, s1, f);
+	input [3:0] a, b, c, d;
+	input s0, s1;
+	output [3:0] f;
+	
+	MUX_basico_4x1 MUX_basico_4x1_0(.a(), .b(), .c(), .d(), .s0(), .s1(), .f());
+	MUX_basico_4x1 MUX_basico_4x1_1(.a(), .b(), .c(), .d(), .s0(), .s1(), .f());
+	MUX_basico_4x1 MUX_basico_4x1_2(.a(), .b(), .c(), .d(), .s0(), .s1(), .f());
+	MUX_basico_4x1 MUX_basico_4x1_3(.a(), .b(), .c(), .d(), .s0(), .s1(), .f());
+	
+endmodule

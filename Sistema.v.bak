@@ -1,0 +1,39 @@
+module Sistema (vagasEstacionamento, CLK, d, n, pontoDisplay7S, colunaMatrizLEDS, linhaMatrizLEDS);
+	input [7:0] vagasEstacionamento;
+	input CLK;
+	output [3:0] d;
+	output [6:0] n;
+	output pontoDisplay7S;
+	
+	output [1:0] colunaMatrizLEDS;
+	output [3:0] linhaMatrizLEDS;
+	
+	wire [7:0] notVagasEsta, dO, dL;
+	wire [3:0] totalVagasOcupadas, totalVagasLivres;
+	
+	not notCH7 (notVagasEsta[7], vagasEstacionamento[7]); 
+	not notCH6 (notVagasEsta[6], vagasEstacionamento[6]); 
+	not notCH5 (notVagasEsta[5], vagasEstacionamento[5]); 
+	not notCH4 (notVagasEsta[4], vagasEstacionamento[4]); 
+	not notCH3 (notVagasEsta[3], vagasEstacionamento[3]); 
+	not notCH2 (notVagasEsta[2], vagasEstacionamento[2]); 
+	not notCH1 (notVagasEsta[1], vagasEstacionamento[1]); 
+	not notCH0 (notVagasEsta[0], vagasEstacionamento[0]);
+	
+	DivisorFrequencia DivisorFreq (.clk(CLK), .Q17(S1), .Q18(S2));
+	
+	SomadorVagas SomadorVagasOcupadas (.V(vagasEstacionamento), .S(totalVagasOcupadas));
+	SomadorVagas SomadorVagasLivres (.V(notVagasEsta), .S(totalVagasLivres));
+	
+	DecodificadorBin2DecD7S DecodificadorVagasOcupadas (.num4b(totalVagasOcupadas), .segmentos(dO));
+	DecodificadorBin2DecD7S DecodificadorVagasLivres (.num4b(totalVagasLivres), .segmentos(dL));
+	
+	// Multiplexacao do display de 7 segmentos
+	MUX_quadruplo_4x1 MUX_quadruplo_4x1_0(.a(4'b0111), .b(4'b1011), .c(4'b1101), .d(4'b1110), .s0(S2), .s1(S1), .f(d));
+	MUX_7b_4x1 MUX_7b_4x1_0(.a(7'b1110001), .b(dL), .c(7'b0000001), .d(dO), .s0(S2), .s1(S1), .f(n));
+	
+	// Multiplexacao da matriz de LEDS
+	MUX_duplo_2x1 MUX_duplo_2x1_0(.a(2'b10), .b(2'b01), .s(S1), .f(colunaMatrizLEDS));
+	MUX_quadruplo_2x1 MUX_quadruplo_2x1_0(.a({notVagasEsta[7],notVagasEsta[5],notVagasEsta[3], notVagasEsta[1]}), .b({notVagasEsta[6],notVagasEsta[4],notVagasEsta[2], notVagasEsta[0]}), .s(S1), .f(linhaMatrizLEDS));
+	
+endmodule

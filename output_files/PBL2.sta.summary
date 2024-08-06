@@ -1,0 +1,233 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK18|Q'
+Slack : -1.194
+TNS   : -1.194
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK15|Q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK1|Q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK5|Q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK11|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK13|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK17|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK3|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK7|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK9|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK8|Q'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK10|Q'
+Slack : 0.827
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK12|Q'
+Slack : 0.827
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK6|Q'
+Slack : 0.828
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK2|Q'
+Slack : 0.833
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK16|Q'
+Slack : 0.840
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK4|Q'
+Slack : 1.090
+TNS   : 0.000
+
+Type  : Setup 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK14|Q'
+Slack : 1.255
+TNS   : 0.000
+
+Type  : Setup 'CLK'
+Slack : 1.647
+TNS   : 0.000
+
+Type  : Hold 'CLK'
+Slack : -1.701
+TNS   : -1.701
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK14|Q'
+Slack : -1.309
+TNS   : -1.309
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK4|Q'
+Slack : -1.144
+TNS   : -1.144
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK16|Q'
+Slack : -0.894
+TNS   : -0.894
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK2|Q'
+Slack : -0.887
+TNS   : -0.887
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK6|Q'
+Slack : -0.882
+TNS   : -0.882
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK10|Q'
+Slack : -0.881
+TNS   : -0.881
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK12|Q'
+Slack : -0.881
+TNS   : -0.881
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK8|Q'
+Slack : -0.862
+TNS   : -0.862
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK11|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK13|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK17|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK3|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK7|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK9|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK15|Q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK1|Q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK5|Q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK18|Q'
+Slack : 1.640
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLK'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK10|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK11|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK12|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK13|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK14|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK15|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK16|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK17|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK18|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK1|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK2|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK3|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK4|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK5|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK6|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK7|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK8|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'DivisorFrequencia:DivisorFreq|FF_JK:FF_JK9|Q'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------
